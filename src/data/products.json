@@ -1,15 +1,1 @@
-[
-  {
-    "id": "86432f4c-5b66-4475-a4e9-851a006f1a93",
-    "title": "Vino Malbec",
-    "description": "Vino tinto de alta calidad, cosecha 2020.",
-    "code": "VM2020",
-    "price": 3500,
-    "status": true,
-    "stock": 50,
-    "category": "Tintos",
-    "thumbnails": [
-      "img/malbec1.jpg"
-    ]
-  }
-]
+[]
