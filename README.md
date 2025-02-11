@@ -34,8 +34,10 @@ Remini API es una aplicación backend desarrollada con **Node.js** y **Express**
 ```
 ## ▶️ Uso de la API
   Para correr la API en modo local, usa:
+  ```bash
   npm start
-  El servidor estará disponible en:
+  ```
+  El servidor estará disponible en: 
 🔗 http://localhost:8080
 
 ## 🔀 Rutas principales
