@@ -25,11 +25,13 @@ Remini API es una aplicación backend desarrollada con **Node.js** y **Express**
 1. Clona el repositorio y accede a la carpeta del proyecto:
 
    git clone https://github.com/tu_usuario/tu_repositorio.git
+```bash
    cd tu_repositorio
-
+```
 2. Instala las dependencias necesarias:
+```bash
    npm install
-
+```
 ## ▶️ Uso de la API
   Para correr la API en modo local, usa:
   npm start
@@ -79,4 +81,4 @@ Si deseas contribuir al proyecto, sigue estos pasos:
 ## 🛠️ Pruebas con Postman
 Para facilitar la prueba de la API, tenes una colección de Postman.
 Podes importarla directamente en Postman y probar las rutas disponibles.
-📥 Descarga la colección aquí:[Remini API Postman Collection](Postman_Collection.json)
+📥 Descarga la colección aquí:[Remini API Postman Collection](/Remini/docs/Postman_Collection.json)
