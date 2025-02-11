@@ -81,4 +81,4 @@ Si deseas contribuir al proyecto, sigue estos pasos:
 ## 🛠️ Pruebas con Postman
 Para facilitar la prueba de la API, tenes una colección de Postman.
 Podes importarla directamente en Postman y probar las rutas disponibles.
-📥 Descarga la colección aquí:[Remini API Postman Collection](/Remini/docs/Postman_Collection.json)
+📥 Descarga la colección aquí: [Remini API Postman Collection](/docs/Postman_Collection.json)
