@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "177e4798-d891-4432-ac2e-9ec2c393df32",
+    "title": "Vino Malbec",
+    "description": "Vino tinto de alta calidad, cosecha 2020.",
+    "code": "VM2020",
+    "price": 3500,
+    "status": true,
+    "stock": 50,
+    "category": "Tintos",
+    "thumbnails": [
+      "img/malbec1.jpg"
+    ]
+  },
+  {
+    "id": "4fefc1b1-fa13-41d5-a081-e27b717fc646",
+    "title": "Vino Malbec",
+    "description": "Vino tinto de alta calidad, cosecha 2020.",
+    "code": "VM2020",
+    "price": 3500,
+    "status": true,
+    "stock": 50,
+    "category": "Tintos",
+    "thumbnails": [
+      "img/malbec1.jpg"
+    ]
+  },
+  {
+    "id": "befd9057-8eb6-4b8c-9581-4c6579db741b",
+    "title": "Vino Rosé",
+    "description": "Refrescante y ligero, ideal para el verano.",
+    "code": "VR2021",
+    "price": 2900,
+    "status": true,
+    "stock": 35,
+    "category": "Rosados",
+    "thumbnails": [
+      "img/rose1.jpg"
+    ]
+  },
+  {
+    "id": "a3a1110f-efde-4514-965e-11e6f580ca54",
+    "title": "Vino Merlot",
+    "description": "Vino suave y aterciopelado, cosecha 2019.",
+    "code": "VM2019",
+    "price": 3800,
+    "status": true,
+    "stock": 25,
+    "category": "Tintos",
+    "thumbnails": [
+      "img/merlot1.jpg"
+    ]
+  },
+  {
+    "id": "16aa248f-bcc8-4cee-b55c-417823ddc85a",
+    "title": "Vino Chardonnay",
+    "description": "Vino blanco afrutado, ideal para mariscos.",
+    "code": "VC2022",
+    "price": 3100,
+    "status": true,
+    "stock": 40,
+    "category": "Blancos",
+    "thumbnails": [
+      "img/chardonnay1.jpg"
+    ]
+  }
+]
