@@ -1,0 +1,114 @@
+{
+    "info": {
+        "name": "Remini API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Products",
+            "item": [
+                {
+                    "name": "Get all products",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/products"
+                    }
+                },
+                {
+                    "name": "Get product by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/products/:pid",
+                        "description": "Replace ':pid' with the product ID"
+                    }
+                },
+                {
+                    "name": "Create a product",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": "{{base_url}}/api/products",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"Sample Product\",\n    \"description\": \"Description here\",\n    \"code\": \"SP123\",\n    \"price\": 100,\n    \"status\": true,\n    \"stock\": 50,\n    \"category\": \"Wine\",\n    \"thumbnails\": [\n        \"image1.jpg\",\n        \"image2.jpg\"\n    ]\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Update a product",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": "{{base_url}}/api/products/:pid",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"Updated Product\",\n    \"price\": 120\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete a product",
+                    "request": {
+                        "method": "DELETE",
+                        "url": "{{base_url}}/api/products/:pid"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Carts",
+            "item": [
+                {
+                    "name": "Create a cart",
+                    "request": {
+                        "method": "POST",
+                        "url": "{{base_url}}/api/carts"
+                    }
+                },
+                {
+                    "name": "Get cart by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/carts/:cid",
+                        "description": "Replace ':cid' with the cart ID"
+                    }
+                },
+                {
+                    "name": "Add product to cart",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": "{{base_url}}/api/carts/:cid/product/:pid",
+                        "description": "Replace ':cid' with the cart ID and ':pid' with the product ID",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"quantity\": 1\n}"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8080",
+            "type": "string"
+        }
+    ]
+}
