@@ -1,35 +1,67 @@
 [
-	{
-		"id": "dd536769-bf33-41b6-876e-a24754490e36",
-		"title": "titulo",
-		"description": "description",
-		"code": 1234,
-		"price": 200,
-		"status": true,
-		"stock": 10,
-		"category": "categoria",
-		"thumbnails": []
-	},
-	{
-		"id": "36640fac-f282-435d-b550-a24b1b2de526",
-		"title": "titulo 2",
-		"description": "description 2",
-		"code": 1234,
-		"price": 200,
-		"status": true,
-		"stock": 12,
-		"category": "categoria",
-		"thumbnails": []
-	},
-	{
-		"id": "67cbd923-2209-494f-a81a-ef0b3c82657e",
-		"title": "titulo 3",
-		"description": "description 3",
-		"code": 1234,
-		"price": 200,
-		"status": true,
-		"stock": 12,
-		"category": "categoria",
-		"thumbnails": []
-	}
+  {
+    "id": "cfce4f07-b5cd-4606-90e9-b5a5db286d1d",
+    "title": "Vino Malbec",
+    "description": "Vino tinto de alta calidad, cosecha 2020.",
+    "code": "VM2020",
+    "price": 3500,
+    "status": true,
+    "stock": 50,
+    "category": "Tintos",
+    "thumbnails": [
+      "img/malbec1.jpg"
+    ]
+  },
+  {
+    "id": "72e54aad-3f7d-4ae5-8616-ad83989567b2",
+    "title": "Vino Cabernet Sauvignon",
+    "description": "Vino elegante y equilibrado, cosecha 2021.",
+    "code": "VC2021",
+    "price": 4200,
+    "status": true,
+    "stock": 30,
+    "category": "Tintos",
+    "thumbnails": [
+      "img/cabernet1.jpg"
+    ]
+  },
+  {
+    "id": "123a03db-246f-4e87-921a-5a21a3720169",
+    "title": "Vino Chardonnay",
+    "description": "Vino blanco afrutado, ideal para mariscos.",
+    "code": "VC2022",
+    "price": 3100,
+    "status": true,
+    "stock": 40,
+    "category": "Blancos",
+    "thumbnails": [
+      "img/chardonnay1.jpg"
+    ]
+  },
+  {
+    "id": "0c785a2f-bdf7-4739-a216-3ba3cf786404",
+    "title": "Vino Merlot",
+    "description": "Vino suave y aterciopelado, cosecha 2019.",
+    "code": "VM2019",
+    "price": 3800,
+    "status": true,
+    "stock": 25,
+    "category": "Tintos",
+    "thumbnails": [
+      "img/merlot1.jpg"
+    ]
+  },
+  {
+    "id": "54c0d6b9-eeb4-4224-a10c-25201438b512",
+    "title": "Vino Rosé",
+    "description": "Refrescante y ligero, ideal para el verano.",
+    "code": "VR2021",
+    "price": 2900,
+    "status": true,
+    "stock": 35,
+    "category": "Rosados",
+    "thumbnails": [
+      "img/rose1.jpg"
+    ]
+  }
 ]

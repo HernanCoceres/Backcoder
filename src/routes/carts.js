@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { v4 as uuidv4 } from 'uuid'
-import { readFile, writeFile } from '../utils/fileManager.js'
+import { readFile, writeFile } from '../utils/fs.utils.js'
 import { config } from '../config/index.js'
 import path from 'path'
 
