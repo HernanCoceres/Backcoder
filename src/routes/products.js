@@ -4,10 +4,10 @@ import path from 'path';
 import { config } from '../config/index.js';
 import { v4 as uuidv4 } from 'uuid';
 import { validateInputProducts } from '../middlewares/validationMiddleware.js';
-import { addcart } from '../utils/addcart.js';
+import { CartManager } from '../utils/CartManager.js';
 
 export const ProductsRouter = Router();
-const Cart = new addcart();
+const cartManager = new CartManager();
 
 const pathToProducts = path.join(config.dirname, '/src/data/products.json');
 
@@ -50,13 +50,13 @@ ProductsRouter.post('/', validateInputProducts, async (req, res) => {
   await fs.promises.writeFile(pathToProducts, JSON.stringify(products, null, 2));
 
   // Agregar el producto al carrito automáticamente
-  const carts = await addcart.getCarts();
+  const carts = await cartManager.getCarts();
   if (carts.length === 0) {
-    await addcart.createCart();
+    await cartManager.createCart();
   }
 
   const firstCart = carts[0]; // Tomamos el primer carrito disponible
-  await addcart.addProductToCart(firstCart.id, id);
+  await cartManager.addProductToCart(firstCart.id, id);
 
   res.send({ message: 'Producto creado y agregado al carrito', data: product });
 });

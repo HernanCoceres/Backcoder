@@ -5,7 +5,7 @@ import { config } from '../config/index.js';
 
 const cartFilePath = path.join(config.dirname, '/src/data/cart.json');
 
-export class addcart {
+export class CartManager {
   constructor(filePath = cartFilePath) {
     this.filePath = filePath;
   }
