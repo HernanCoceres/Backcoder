@@ -1,6 +1,6 @@
 [
   {
-    "id": "177e4798-d891-4432-ac2e-9ec2c393df32",
+    "id": "51dcc82f-b34a-4676-ad87-f286502b3d1d",
     "title": "Vino Malbec",
     "description": "Vino tinto de alta calidad, cosecha 2020.",
     "code": "VM2020",
@@ -13,33 +13,33 @@
     ]
   },
   {
-    "id": "4fefc1b1-fa13-41d5-a081-e27b717fc646",
-    "title": "Vino Malbec",
-    "description": "Vino tinto de alta calidad, cosecha 2020.",
-    "code": "VM2020",
-    "price": 3500,
+    "id": "0ab58d48-08b8-4859-8ff9-3a465a0028d7",
+    "title": "Vino Cabernet Sauvignon",
+    "description": "Vino elegante y equilibrado, cosecha 2021.",
+    "code": "VC2021",
+    "price": 4200,
     "status": true,
-    "stock": 50,
+    "stock": 30,
     "category": "Tintos",
     "thumbnails": [
-      "img/malbec1.jpg"
+      "img/cabernet1.jpg"
     ]
   },
   {
-    "id": "befd9057-8eb6-4b8c-9581-4c6579db741b",
-    "title": "Vino Rosé",
-    "description": "Refrescante y ligero, ideal para el verano.",
-    "code": "VR2021",
-    "price": 2900,
+    "id": "5f83b87e-893e-4806-8dc9-18ca74e44d14",
+    "title": "Vino Chardonnay",
+    "description": "Vino blanco afrutado, ideal para mariscos.",
+    "code": "VC2022",
+    "price": 3100,
     "status": true,
-    "stock": 35,
-    "category": "Rosados",
+    "stock": 40,
+    "category": "Blancos",
     "thumbnails": [
-      "img/rose1.jpg"
+      "img/chardonnay1.jpg"
     ]
   },
   {
-    "id": "a3a1110f-efde-4514-965e-11e6f580ca54",
+    "id": "49f5ba22-9e8a-4571-aadb-1ca3969d3fb7",
     "title": "Vino Merlot",
     "description": "Vino suave y aterciopelado, cosecha 2019.",
     "code": "VM2019",
@@ -52,16 +52,16 @@
     ]
   },
   {
-    "id": "16aa248f-bcc8-4cee-b55c-417823ddc85a",
-    "title": "Vino Chardonnay",
-    "description": "Vino blanco afrutado, ideal para mariscos.",
-    "code": "VC2022",
-    "price": 3100,
+    "id": "f453e88b-dbdb-4150-8809-7ed82465a90f",
+    "title": "Vino Rosé",
+    "description": "Refrescante y ligero, ideal para el verano.",
+    "code": "VR2021",
+    "price": 2900,
     "status": true,
-    "stock": 40,
-    "category": "Blancos",
+    "stock": 35,
+    "category": "Rosados",
     "thumbnails": [
-      "img/chardonnay1.jpg"
+      "img/rose1.jpg"
     ]
   }
 ]

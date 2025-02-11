@@ -56,10 +56,8 @@ export class CartManager {
     const productIndex = cart.products.findIndex(p => p.product === productId);
 
     if (productIndex !== -1) {
-      // Si el producto ya existe, incrementamos la cantidad
       cart.products[productIndex].quantity += 1;
     } else {
-      // Si no existe, lo agregamos con cantidad 1
       cart.products.push({ product: productId, quantity: 1 });
     }
 

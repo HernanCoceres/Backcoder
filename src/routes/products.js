@@ -49,13 +49,13 @@ ProductsRouter.post('/', validateInputProducts, async (req, res) => {
   products.push(product);
   await fs.promises.writeFile(pathToProducts, JSON.stringify(products, null, 2));
 
-  // Agregar el producto al carrito automáticamente
+  // Agrega al carritp
   const carts = await cartManager.getCarts();
   if (carts.length === 0) {
     await cartManager.createCart();
   }
 
-  const firstCart = carts[0]; // Tomamos el primer carrito disponible
+  const firstCart = carts[0];
   await cartManager.addProductToCart(firstCart.id, id);
 
   res.send({ message: 'Producto creado y agregado al carrito', data: product });
