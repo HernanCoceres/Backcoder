@@ -1,57 +1,62 @@
-import { Router } from 'express'
-import { v4 as uuidv4 } from 'uuid'
-import { validateInputProducts } from '../middlewares/validationMiddleware.js'
-import { readFile, writeFile } from '../utils/fs.utils.js'
-import { config } from '../config/index.js'
-import path from 'path'
+import { Router } from 'express';
+import fs from 'fs';
+import path from 'path';
+import { config } from '../config/index.js';
+import { v4 as uuidv4 } from 'uuid';
+import { validateInputProducts } from '../middlewares/validationMiddleware.js';
+import { addcart } from '../utils/addcart.js';
 
-export const ProductsRouter = Router()
-const pathToProducts = path.join(config.dirname, 'src/data/products.json')
+export const ProductsRouter = Router();
+const Cart = new addcart();
 
-// Esto para tner todos los products
+const pathToProducts = path.join(config.dirname, '/src/data/products.json');
+
 ProductsRouter.get('/', async (req, res) => {
-  const products = await readFile(pathToProducts)
-  res.json({ products })
-})
+  let productsString = await fs.promises.readFile(pathToProducts, 'utf-8');
+  const products = JSON.parse(productsString);
+  res.send({ products });
+});
 
-// para obtener un producto por id
-ProductsRouter.get('/:pid', async (req, res) => {
-  const products = await readFile(pathToProducts)
-  const product = products.find(p => p.id === req.params.pid)
-
-  if (!product) return res.status(404).json({ message: 'Producto no encontrado' })
-  res.json({ product })
-})
-
-// para crear un producto
 ProductsRouter.post('/', validateInputProducts, async (req, res) => {
-  const products = await readFile(pathToProducts)
-  const newProduct = { id: uuidv4(), ...req.body }
+  let productsString = await fs.promises.readFile(pathToProducts, 'utf-8');
+  const products = JSON.parse(productsString);
 
-  products.push(newProduct)
-  await writeFile(pathToProducts, products)
+  const id = uuidv4();
 
-  res.status(201).json({ message: 'Producto creado', product: newProduct })
-})
+  const {
+    title,
+    description,
+    code,
+    price,
+    status,
+    stock,
+    category,
+    thumbnails,
+  } = req.body;
 
-// actualiza producto
-ProductsRouter.put('/:pid', async (req, res) => {
-  let products = await readFile(pathToProducts)
-  const index = products.findIndex(p => p.id === req.params.pid)
+  const product = {
+    id,
+    title,
+    description,
+    code,
+    price,
+    status,
+    stock,
+    category,
+    thumbnails,
+  };
 
-  if (index === -1) return res.status(404).json({ message: 'Producto no encontrado' })
+  products.push(product);
+  await fs.promises.writeFile(pathToProducts, JSON.stringify(products, null, 2));
 
-  products[index] = { ...products[index], ...req.body, id: products[index].id }
-  await writeFile(pathToProducts, products)
+  // Agregar el producto al carrito automáticamente
+  const carts = await addcart.getCarts();
+  if (carts.length === 0) {
+    await addcart.createCart();
+  }
 
-  res.json({ message: 'Producto actualizado', product: products[index] })
-})
+  const firstCart = carts[0]; // Tomamos el primer carrito disponible
+  await addcart.addProductToCart(firstCart.id, id);
 
-// saca un producto
-ProductsRouter.delete('/:pid', async (req, res) => {
-  let products = await readFile(pathToProducts)
-  products = products.filter(p => p.id !== req.params.pid)
-
-  await writeFile(pathToProducts, products)
-  res.json({ message: 'Producto eliminado' })
-})
+  res.send({ message: 'Producto creado y agregado al carrito', data: product });
+});
